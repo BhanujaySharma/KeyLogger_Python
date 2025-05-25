@@ -1,1 +1,1 @@
-thisisasampleofthekeylogger.
+[Key.shift] This[Key.space] is[Key.space] a[Key.space] sample[Key.space] input[Key.space] file[Key.space] for[Key.space] the[Key.space] keylogger[Key.space] o[Key.backspace] to[Key.space] be[Key.space] output[Key.space] in[Key.space] the[Key.space] text[Key.space] [Key.shift] File[Key.space] with[Key.space] additional[Key.space] charace[Key.backspace] ter[Key.space] combinations[Key.space] and[Key.space] [Key.shift] $peci[Key.shift] @al[Key.space] characters.[Key.esc] 

